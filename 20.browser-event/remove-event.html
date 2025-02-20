@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="but">click me</button>
+    </div>
+    <script>
+       let x = function(e)  {
+            alert("hello1")
+        }
+       let y = function(e)  {
+            alert("hello2")
+        }
+        btn.addEventListener ('click', x)
+        btn.addEventListener ('click', y)
+
+        let a = prompt("enter your number ?")
+        if (a == "2"){
+            btn.removeEventListener ('click' ,x)
+        }
+    </script>
+</body>
+</html>
