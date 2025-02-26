@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let p1 = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("resolve after 2 seconde");
+                resolve(56)
+            }, 3000)
+        })
+        p1.then((value) => {
+            console.log(value);
+            let p2 = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    reject("promise 2")
+
+                })
+            }) 
+            p2.catch((error) => {
+            console.log("some error occurred in p2");
+        })
+            return p2
+        }).then((value) => {
+            console.log("we are done");
+        }).then((value)=>{
+            setTimeout(()=>{
+                console.log("promise....");
+            },1000)
+        })
+    </script>
+</body>
+
+</html>
