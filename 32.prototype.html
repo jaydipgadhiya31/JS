@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = {
+            name :"jaydip",
+            language : "english"
+        }
+        console.log(a);
+        let p= {
+            run :() =>{
+                alert("run")
+            }
+        }
+        a.__proto__ = p
+        a.run()
+    </script>
+</body>
+</html>
