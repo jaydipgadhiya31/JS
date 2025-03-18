@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class RailwayForm{
+            submit(){
+                alert(this.name + ": form submitted for train number :" + this.trainnumber)
+            }
+            cancel(){
+                alert(this.name + ": this form is cancel" + this.trainnumber)
+            }
+            fill(givennname , trainnumber){
+                this.name = givennname
+                this.trainnumber =trainnumber
+            }
+        }
+       // Create a form
+       let harryFrom = new RailwayForm()
+       // fill the details
+       harryFrom.fill("harry" ,698547)
+       // Create a form
+       let RohanFrom = new RailwayForm()
+       let RohanFrom1 = new RailwayForm()
+       // fill the details
+        RohanFrom.fill("Rohan" ,9328555)
+        RohanFrom1.fill("Rohan" ,123456)    
+
+        harryFrom.submit()
+        RohanFrom.submit()
+        RohanFrom1.submit()
+        RohanFrom.cancel()
+    </script>
+</body>
+</html>
