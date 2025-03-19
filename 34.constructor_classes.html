@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // task 1
+        //  class RailwayForm {
+        //      constructor(givennname, trainnumber) {
+        //         console.log("CONSTUCTOR CALLED..." + givennname + " " + trainnumber);
+        //          this.name = givennname
+        //          this.trainnumber = trainnumber
+        //      }
+        //         submit() {
+        //             alert(this.name + ": form submitted for train number :" + this.trainnumber)
+        //         }
+        //         cancel() {
+        //             alert(this.name + ": this form is cancel for train number" + this.trainnumber)
+        //         }
+        //     }
+        //     // Create & fill  a form
+        //     let harryFrom = new RailwayForm("harry",123456)
+        //     // harryFrom.fill()
+        //     // Create & fill a form
+        //     let RohanFrom = new RailwayForm("rohan",789456)
+        //     let RohanFrom1 = new RailwayForm("rohan1",456789)
+
+        //     harryFrom.submit()
+        //     RohanFrom.submit()
+        //     RohanFrom1.submit()
+        //     RohanFrom.cancel()
+
+        // task 2
+        // class RailwayForm {
+        //          constructor(givennname, trainnumber ,address) {
+        //             console.log("CONSTUCTOR CALLED..." + givennname + " " + trainnumber);
+        //              this.name = givennname
+        //              this.trainnumber = [trainnumber]
+        //              this.address = address
+        //          }
+        //          preview(){
+        //              alert(this.name + ": your form is  for train number :" + this.trainnumber +"and your address" + this.address)
+        //          }
+
+        //             submit() {
+        //                 alert(this.name + ": form submitted for train number :" + this.trainnumber)
+        //             }
+
+        //             cancel() {
+        //                 alert(this.name + ": this form is cancel for train number" + this.trainnumber)
+        //                 this.trainnumber = 0
+        //             }
+
+        //         }
+        //         let harryFrom = new RailwayForm("Harry",134897, "keshod")
+        //         harryFrom.preview()
+        //         harryFrom.submit()
+        //         harryFrom.cancel()
+        //         harryFrom.preview()
+
+        // task 3
+
+        // class Employee {
+        //     login() {
+        //         console.log(`employee has logged in`);
+        //     }
+        //     logout() {
+        //         console.log(`employee has logged out`);
+        //     }
+        //     requestLeaves(leaves) {
+        //         console.log(`employee has requested ${leaves}  leaves `);
+        //     }
+        // }
+        // class programmer extends Employee {
+        //     requestCoffee(x) {
+        //         console.log(`employee has requested ${x} coffees `);
+        //     }
+        //     // requestLeaves(leaves) {
+        //     //     console.log(`employee has requested ${leaves + 1} (One extra) `);
+        //     // } or
+        //      requestLeaves(leaves) {
+        //         super.requestLeaves(4)
+        //         console.log("One extra is granted");
+        //     }
+        // }
+        // let e = new programmer()
+        // e.login()
+        // e.requestLeaves(3)  
+
+        // task 4
+
+         class Employee {
+            constructor(name){
+                console.log(`${name} - Employee's constructor is here`);
+                this.name = name
+            }
+                login() {
+                    console.log(`employee has logged in`);
+                }
+                logout() {
+                    console.log(`employee has logged out`);
+                }
+                requestLeaves(leaves) {
+                    console.log(`employee has requested ${leaves}  Leaves `);
+                }
+            }
+            class programmer extends Employee {
+                 constructor(name) {
+                    super(name)
+                    console.log(`constructor is here this written`);
+                    this.name = name
+                }
+                requestCoffee(x) {
+                    console.log(`employee has requested ${x} coffees `);
+                }
+                // requestLeaves(leaves) {
+                //     console.log(`employee has requested ${leaves + 1} (One extra) `);
+                // } or
+                requestLeaves(leaves) {
+                    super.requestLeaves(4)
+                    console.log("One extra is granted");
+                }
+            }
+            let e = new programmer("harry")
+            e.login()
+            e.requestLeaves(3)  
+    </script>
+</body>
+
+</html>
