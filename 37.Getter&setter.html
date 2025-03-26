@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // class Animal{
+        //     constructor(name){
+        //         this._name =name
+        //     }
+        //     fly(){
+        //         console.log("mai ud rah hu")
+        //     }
+        //     get get(){
+        //         return this._name
+        //     }
+        // }
+        // let a = new Animal("Bruno")
+        // a.fly()
+        // console.log(a.name);
+        // a.name = "jack"
+        // console.log(a.name);
+
+        // task 2
+         class Animal {
+                constructor(name) {
+                    this._name = name
+                }
+                fly() {
+                    console.log("mai ud rah hu")
+                }
+                get get() {
+                    return this._name
+                }
+                set name(newName) {
+                    return this._name = newName
+                }
+            }
+            class rabbit extends Animal{
+                eatCarrot(){
+                    console.log("eating carrot");
+                }
+                    }
+            let a = new rabbit ("Bruno")
+            a.fly()
+            console.log(a.name);
+            a.name = "jack"
+            console.log(a.name);
+            let c = 31
+
+            console.log(a instanceof Animal);
+            console.log(a instanceof rabbit);
+            console.log(c instanceof Animal);
+    </script>
+</body>
+</html>
