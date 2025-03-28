@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [3, 5 ,9 ,14 ,12 , 19 ,22 ,25,56]
+        // let [a , b , c , d , ... rest] = arr
+        // console.log(a,b,c,d , rest);
+        // or
+         let [a, ,b, ...rest] = arr
+            console.log(a, b, rest)
+
+            // spread opreter
+
+            let arr1 = [3,5,8]
+            let obj1 = {...arr1 }
+            console.log(obj1);
+
+            function sum (v1, v2, v3){
+                return v1+ v2+ v3
+            }
+            console.log(sum(...arr1));
+    </script>
+</body>
+</html>
