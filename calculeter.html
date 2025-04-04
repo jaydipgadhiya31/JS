@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- CSS  -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: violet;
+        }
+
+        .box {
+            color: aliceblue;
+            width: 30%;
+            margin: 50px auto;
+            background-color: rgb(69, 73, 73);
+            box-shadow: 10px 10px 10px antiquewhite;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px
+        }
+
+        input {
+            height: 30px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: blue;
+            border: 1px solid blue;
+            border-radius: 50%;
+            color: aliceblue;
+            font-size: 30px;
+        }
+
+        .res {
+            padding: 10px 0px;
+            border: 2px dashed aliceblue;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Calculator</h1>
+    <div class="box">
+        <div class="col row">
+            <label for="firstNumber">First Number :</label>
+            <input type="text" name="firstNumber" id="firstNumber">
+        </div>
+        <br><br>
+        <div class="col row">
+            <label for="secondNumber">Second Number :</label>
+            <input type="text" name="secondNumber" id="secondNumber">
+        </div>
+        <br><br>
+        <div class="col row">
+            <button onclick="add()">+</button>
+            <button onclick="sub()">-</button>
+            <button onclick="malti()">*</button>
+            <button onclick="divad()">/</button>
+        </div>
+        <div class="col res">
+            <h2>Result_Text : <span id="resText"></span></h2>
+            <h2>Result_HTML : <span id="resHtml"></span></h2>
+        </div>
+    </div>
+
+    <!-- JavaScript  -->
+
+    <script>
+        let inpData1 = document.getElementById("firstNumber")
+        let inpData2 = document.getElementById("secondNumber")
+
+        function add() {
+            // console 
+
+            console.log(typeof parseFloat(inpData1.value));
+            console.log(typeof parseFloat(inpData2.value));
+            console.log(parseFloat(inpData1.value) + parseFloat(inpData2.value));
+
+
+            // Alert 
+            let result = parseFloat(inpData1.value) + parseFloat(inpData2.value)
+            alert(result)
+
+
+            // innerText 
+
+
+            // document.getElementById("resText").innerText = `<i>${result}</i>`
+            document.getElementById("resText").innerText = result
+
+
+            // innerHTML
+
+            document.getElementById("resHtml").innerHTML = `<i>${result}</i>`
+
+
+        }
+        function sub() {
+            console.log(typeof parseFloat(inpData1.value));
+            console.log(typeof parseFloat(inpData2.value));
+            console.log(parseFloat(inpData1.value) - parseFloat(inpData2.value));
+              let result = parseFloat(inpData1.value) - parseFloat(inpData2.value)
+            alert(result)
+
+
+            // innerText 
+
+
+            // document.getElementById("resText").innerText = `<i>${result}</i>`
+            document.getElementById("resText").innerText = result
+
+
+            // innerHTML
+
+            document.getElementById("resHtml").innerHTML = `<i>${result}</i>`
+
+
+        }
+        function malti() {
+            console.log(typeof parseFloat(inpData1.value));
+            console.log(typeof parseFloat(inpData2.value));
+            console.log(parseFloat(inpData1.value) * parseFloat(inpData2.value));
+              document.getElementById("resHtml").innerHTML = `<i>${result}</i>`
+              
+        }
+        function divad() {
+            console.log(typeof parseFloat(inpData1.value));
+            console.log(typeof parseFloat(inpData2.value));
+            console.log(parseFloat(inpData1.value) / parseFloat(inpData2.value));
+              document.getElementById("resHtml").innerHTML = `<i>${result}</i>`
+        }
+
+
+        // calculate()
+    </script>
+</body>
+
+</html>
